@@ -1,0 +1,12 @@
+<h2>Registered Users Data</h2>
+
+<table class="table table-primary table-bordered">
+    <tr>
+        <th>First name</th>
+        <th>Last name</th>
+    </tr>
+    <tr *ngFor="let x of userData">
+        <td>{{x.fname}}</td>
+        <td>{{x.lname}}</td>
+    </tr>
+</table>

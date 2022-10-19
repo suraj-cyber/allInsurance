@@ -1,0 +1,55 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" routerLink="home">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        
+        <div class="row">
+          <div class="col">
+            <div ngbDropdown class="d-inline-block">
+              <a type="button" class="nav-link dropdown-toggle" id="dropdownBasic1" ngbDropdownToggle>Pages
+              </a>
+              <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                <a ngbDropdownItem>Action - 1</a>
+                <a ngbDropdownItem>Another Action</a>
+                <a ngbDropdownItem>Something else is here</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <select (change)="onSelectPages($event)" class="nav-link active">
+          <option *ngFor="let x of pages" value="{{x.path}}">{{x.name}}</option>
+        </select>
+        
+        <!-- <li class="nav-item">
+          <a class="nav-link" routerLink="apiInt01" tabindex="-1" >API int 01</a>
+        </li> -->
+        <li class="nav-item">
+          <a class="nav-link" routerLink="signUp01">SignUp01</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="signupData">SignUp Data</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="login01">Login 01</a>
+        </li>
+      </ul>
+      <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+
+<router-outlet></router-outlet>

@@ -1,0 +1,11 @@
+.price-tag{
+    color: #002e5b;
+    font-weight: bold;
+}
+
+.pricing-top-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 55vh;
+}
